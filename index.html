@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanjiv Vinod & Associates | Chartered Accountants | Patiala</title>
+<meta name="description" content="Sanjiv Vinod and Associates — Chartered Accountants in Patiala, Punjab. Providing Income Tax, GST, Audit, Company Law, TDS and Tax Litigation services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1b2a4a;
+    --navy-dark: #111d33;
+    --gold: #b5882a;
+    --gold-light: #d4a843;
+    --gold-pale: #f5edd8;
+    --white: #ffffff;
+    --off-white: #f9f7f3;
+    --gray-light: #f2f0ea;
+    --gray: #8a8880;
+    --gray-dark: #4a4840;
+    --text: #1e1c18;
+    --border: #e0dcd2;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--white);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.3;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  img { max-width: 100%; display: block; }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--navy-dark);
+    color: #c8c4bc;
+    font-size: 12.5px;
+    padding: 8px 0;
+    letter-spacing: 0.02em;
+  }
+  .topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .topbar a { color: #c8c4bc; }
+  .topbar a:hover { color: var(--gold-light); }
+  .topbar-left, .topbar-right { display: flex; gap: 20px; align-items: center; }
+
+  /* ── HEADER / NAV ── */
+  header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    gap: 20px;
+  }
+  .logo { display: flex; align-items: center; gap: 14px; }
+  .logo-badge {
+    width: 48px; height: 48px;
+    background: var(--navy);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .logo-badge span {
+    color: var(--gold-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  .logo-text {}
+  .logo-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .logo-sub {
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  nav { display: flex; align-items: center; gap: 2px; }
+  nav a {
+    padding: 8px 14px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--navy);
+    border-radius: 6px;
+    transition: all 0.18s;
+    white-space: nowrap;
+  }
+  nav a:hover { background: var(--gray-light); color: var(--gold); }
+  nav a.active { color: var(--gold); }
+  .nav-cta {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: 8px 18px !important;
+    border-radius: 6px !important;
+  }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
+
+  .hamburger { display: none; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; border-radius: 2px; transition: 0.3s; }
+
+  /* ── CONTAINER ── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── SECTIONS ── */
+  section { padding: 72px 0; }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    border-left: 3px solid var(--gold);
+    padding-left: 10px;
+    margin-bottom: 12px;
+  }
+  .section-heading {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    font-size: 15.5px;
+    color: var(--gray);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+  .section-header { margin-bottom: 48px; }
+  .section-header.center { text-align: center; }
+  .section-header.center .section-sub { margin: 0 auto; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-accent {
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(181,136,42,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero .container { position: relative; z-index: 2; padding: 80px 24px; }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(181,136,42,0.18);
+    color: var(--gold-light);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(181,136,42,0.3);
+  }
+  .hero h1 {
+    font-size: 46px;
+    color: var(--white);
+    max-width: 680px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+  .hero h1 em {
+    color: var(--gold-light);
+    font-style: normal;
+  }
+  .hero-desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 16px;
+    max-width: 520px;
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-gold { background: var(--gold); color: var(--white); }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.4); }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.7); }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 52px;
+    padding-top: 36px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    flex-wrap: wrap;
+  }
+  .hero-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--gold-light);
+    font-weight: 700;
+  }
+  .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+
+  /* ── WHY US STRIP ── */
+  .strip {
+    background: var(--gold);
+    padding: 28px 0;
+  }
+  .strip-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .strip-item { display: flex; align-items: center; gap: 10px; color: var(--white); }
+  .strip-icon {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .strip-item p { font-size: 13.5px; font-weight: 500; }
+
+  /* ── SERVICES ── */
+  .services-bg { background: var(--off-white); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 24px;
+    transition: all 0.22s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--gold);
+    opacity: 0;
+    transition: opacity 0.22s;
+    border-radius: 12px 0 0 12px;
+  }
+  .service-card:hover { border-color: var(--gold); box-shadow: 0 8px 28px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .service-card:hover::after { opacity: 1; }
+  .service-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+  .service-title { font-size: 17px; color: var(--navy); margin-bottom: 10px; font-weight: 600; }
+  .service-desc { font-size: 13.5px; color: var(--gray); line-height: 1.65; }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .about-visual {
+    background: var(--navy);
+    border-radius: 16px;
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-visual::before {
+    content: '';
+    position: absolute;
+    right: -40px; bottom: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(181,136,42,0.1);
+  }
+  .about-visual-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--white);
+    margin-bottom: 24px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+  }
+  .about-visual-heading em { color: var(--gold-light); font-style: normal; display: block; }
+  .values-list { list-style: none; position: relative; z-index: 1; }
+  .values-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+  }
+  .values-list li:last-child { border-bottom: none; }
+  .val-check {
+    width: 20px; height: 20px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .val-check::after {
+    content: '✓';
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .about-text {}
+  .about-text p { color: var(--gray-dark); font-size: 15px; margin-bottom: 16px; line-height: 1.75; }
+  .about-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .about-hl {
+    background: var(--gray-light);
+    border-radius: 10px;
+    padding: 16px;
+    border-left: 3px solid var(--gold);
+  }
+  .about-hl-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+  .about-hl-text { font-size: 12.5px; color: var(--gray); }
+
+  /* ── TEAM ── */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+  }
+  .partner-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .partner-card:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.09); }
+  .partner-top {
+    background: var(--navy);
+    padding: 32px 28px 28px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .partner-initials {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--white);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .partner-top-info {}
+  .partner-name { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--white); font-weight: 600; }
+  .partner-role { font-size: 12px; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; }
+  .partner-body { padding: 24px 28px; }
+  .partner-bio { font-size: 13.5px; color: var(--gray-dark); line-height: 1.7; margin-bottom: 18px; }
+  .partner-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .partner-tag {
+    background: var(--gold-pale);
+    color: var(--gold);
+    font-size: 11.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  /* ── PRACTICE AREAS ── */
+  .practice-bg { background: var(--navy); }
+  .practice-bg .section-heading { color: var(--white); }
+  .practice-bg .section-sub { color: rgba(255,255,255,0.55); }
+  .practice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .practice-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 20px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s;
+  }
+  .practice-item:hover { background: rgba(181,136,42,0.15); border-color: rgba(181,136,42,0.4); }
+  .practice-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .practice-name { font-size: 13.5px; color: rgba(255,255,255,0.85); font-weight: 500; }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .contact-info {}
+  .contact-item {
+    display: flex;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-item:last-child { border-bottom: none; }
+  .contact-icon {
+    width: 40px; height: 40px;
+    background: var(--gold-pale);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .contact-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.8; }
+  .contact-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray); font-weight: 600; margin-bottom: 4px; }
+  .contact-value { font-size: 14.5px; color: var(--navy); font-weight: 500; line-height: 1.5; }
+
+  .map-placeholder {
+    background: var(--gray-light);
+    border-radius: 12px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    gap: 12px;
+  }
+  .map-placeholder p { font-size: 13px; color: var(--gray); text-align: center; max-width: 260px; line-height: 1.5; }
+  .map-placeholder a { color: var(--gold); font-weight: 500; font-size: 13px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy-dark);
+    padding: 48px 0 24px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 40px;
+  }
+  .footer-brand {}
+  .footer-logo-name { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--white); margin-bottom: 6px; }
+  .footer-logo-sub { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .footer-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 280px; }
+  .footer-col h4 { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 9px; transition: color 0.15s; }
+  .footer-col a:hover { color: rgba(255,255,255,0.9); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.3); }
+  .footer-disclaimer { font-size: 11.5px; color: rgba(255,255,255,0.25); max-width: 640px; line-height: 1.6; margin-top: 8px; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .topbar { display: none; }
+    nav { display: none; }
+    nav.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); padding: 16px 24px; border-top: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,0.1); gap: 4px; }
+    header { position: relative; }
+    .header-inner { position: relative; }
+    .hamburger { display: block; }
+    .hero h1 { font-size: 30px; }
+    .hero-stats { gap: 24px; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr; }
+    section { padding: 52px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span>📍 Lower Mall Road, Patiala – 147001</span>
+      <a href="mailto:cavinod2014@gmail.com">✉ cavinod2014@gmail.com</a>
+    </div>
+    <div class="topbar-right">
+      <a href="tel:+919914805277">📞 +91-9988715845</a>
+      <span>Mon–Sat: 10:00 AM – 6:00 PM</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-badge"><span>SV</span></div>
+        <div class="logo-text">
+          <div class="logo-name">Sanjiv Vinod & Associates</div>
+          <div class="logo-sub">Chartered Accountants · Patiala</div>
+        </div>
+      </div>
+      <nav id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#contact" class="nav-cta">Contact Us</a>
+      </nav>
+      <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-accent"></div>
+  <div class="container">
+    <div class="hero-tag">Chartered Accountants · Patiala, Punjab</div>
+    <h1>Your Trusted Partner for <em>Tax, Audit & Compliance</em></h1>
+    <p class="hero-desc">Sanjiv Vinod and Associates offers comprehensive chartered accountancy services to businesses and individuals across Punjab — from routine filings to complex appellate litigation.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-gold">Get in Touch</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">2 CA</div>
+        <div class="hero-stat-label">Qualified Partners</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">Full</div>
+        <div class="hero-stat-label">Spectrum Practice</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">Punjab</div>
+        <div class="hero-stat-label">Based Practice</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="container">
+    <div class="strip-inner">
+      <div class="strip-item">
+        <div class="strip-icon">✓</div>
+        <p>Income Tax & TDS Compliance</p>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">✓</div>
+        <p>GST Registration & Returns</p>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">✓</div>
+        <p>Statutory & Tax Audit</p>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">✓</div>
+        <p>Tax Litigation — IT & GST</p>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">✓</div>
+        <p>Company Law & ROC Filings</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-tag">What We Do</div>
+      <h2 class="section-heading">Our Professional Services</h2>
+      <p class="section-sub">We offer a full range of chartered accountancy services tailored to the needs of businesses, professionals, and individuals.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-title">Income Tax</div>
+        <div class="service-desc">Filing of income tax returns for individuals, firms, companies, and trusts. Advance tax computation, tax planning, and representation in scrutiny assessments and appeals before CIT(A) and ITAT.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-title">TDS Compliance</div>
+        <div class="service-desc">TDS deduction, deposit, and quarterly return filing (Forms 24Q, 26Q, 27Q, 27EQ). Reconciliation, correction statements, and assistance with demand notices and defaults.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-title">Goods & Services Tax</div>
+        <div class="service-desc">GST registration, GSTR-1, GSTR-3B, GSTR-9 and GSTR-9C filings, ITC reconciliation, e-way bill advisory, and representation before GST authorities.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-title">Audit & Assurance</div>
+        <div class="service-desc">Statutory audit under the Companies Act, tax audit under Section 44AB, internal audit, and concurrent audit assignments for banking and financial institutions.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-title">Tax Litigation</div>
+        <div class="service-desc">Drafting and filing of rectification applications (Section 154), appeals before CIT(A) and ITAT, and GST appellate proceedings including pre-deposit applications before the Appellate Authority.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-title">Company Law & ROC</div>
+        <div class="service-desc">Incorporation of companies and LLPs, annual return and financial statement filings with MCA/ROC, maintenance of statutory registers, and compliance under the Companies Act, 2013.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">07</div>
+        <div class="service-title">Accounting & Bookkeeping</div>
+        <div class="service-desc">Maintenance of books of accounts, preparation of financial statements, MIS reporting, and outsourced accounting support for businesses and professional firms.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">08</div>
+        <div class="service-title">Business Advisory</div>
+        <div class="service-desc">Advisory on entity structuring, regulatory compliance, financial planning, and management consultancy services for SMEs, traders, and professionals in Punjab.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-visual-heading">A Practice Built on <em>Trust & Diligence</em></div>
+        <ul class="values-list">
+          <li><div class="val-check"></div>Accuracy and integrity in every engagement</li>
+          <li><div class="val-check"></div>Timely delivery without compromise on quality</li>
+          <li><div class="val-check"></div>Transparent communication with clients</li>
+          <li><div class="val-check"></div>Proactive guidance on regulatory changes</li>
+          <li><div class="val-check"></div>Experienced in assessment and appellate matters</li>
+        </ul>
+      </div>
+      <div class="about-text">
+        <div class="section-tag">About the Firm</div>
+        <h2 class="section-heading">Sanjiv Vinod and Associates</h2>
+        <p>Sanjiv Vinod and Associates is a Patiala-based chartered accountancy firm providing reliable and comprehensive financial and compliance services to businesses and individuals across Punjab.</p>
+        <p>The firm is led by CA Vinod Aggarwal and CA Abhinandan Aggarwal, whose combined expertise spans direct taxation, indirect tax, statutory audit, and regulatory compliance. The practice handles matters before income tax authorities, the GST department, and appellate forums.</p>
+        <p>We are committed to providing professional services with personal attention — keeping clients informed, ensuring timely compliance, and providing clear guidance on matters that affect their financial and legal obligations.</p>
+        <div class="about-highlights">
+          <div class="about-hl">
+            <div class="about-hl-title">Direct Taxation</div>
+            <div class="about-hl-text">Income tax, TDS, assessments and appeals</div>
+          </div>
+          <div class="about-hl">
+            <div class="about-hl-title">Indirect Taxation</div>
+            <div class="about-hl-text">GST compliance and litigation</div>
+          </div>
+          <div class="about-hl">
+            <div class="about-hl-title">Assurance</div>
+            <div class="about-hl-text">Statutory and tax audit engagements</div>
+          </div>
+          <div class="about-hl">
+            <div class="about-hl-title">Corporate</div>
+            <div class="about-hl-text">Company law and ROC compliance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section style="background:var(--off-white);" id="team">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-tag">Our Partners</div>
+      <h2 class="section-heading">Meet the Team</h2>
+      <p class="section-sub">Our firm is led by qualified Chartered Accountants with expertise across taxation, audit, and corporate law.</p>
+    </div>
+    <div class="team-grid">
+      <div class="partner-card">
+        <div class="partner-top">
+          <div class="partner-initials">VA</div>
+          <div class="partner-top-info">
+            <div class="partner-name">CA Vinod Aggarwal</div>
+            <div class="partner-role">Partner · FCA</div>
+          </div>
+        </div>
+        <div class="partner-body">
+          <p class="partner-bio">CA Vinod Aggarwal is a founding partner of Sanjiv Vinod and Associates. He has extensive experience in direct taxation, income tax assessments, and appellate proceedings. He advises a wide range of clients including trading firms, manufacturers, and professionals on tax planning and compliance matters across Punjab.</p>
+          <div class="partner-tags">
+            <span class="partner-tag">Income Tax</span>
+            <span class="partner-tag">Tax Appeals</span>
+            <span class="partner-tag">Tax Audit</span>
+            <span class="partner-tag">TDS</span>
+          </div>
+        </div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-top">
+          <div class="partner-initials">AA</div>
+          <div class="partner-top-info">
+            <div class="partner-name">CA Abhinandan Aggarwal</div>
+            <div class="partner-role">Partner · ACA</div>
+          </div>
+        </div>
+        <div class="partner-body">
+          <p class="partner-bio">CA Abhinandan Aggarwal is a partner at Sanjiv Vinod and Associates. He specialises in GST compliance, indirect tax litigation, and audit engagements. He handles complex GST appellate matters, statutory audits, and ROC compliance for business clients across various sectors in Punjab.</p>
+          <div class="partner-tags">
+            <span class="partner-tag">GST</span>
+            <span class="partner-tag">GST Litigation</span>
+            <span class="partner-tag">Statutory Audit</span>
+            <span class="partner-tag">Company Law</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section class="practice-bg">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-tag" style="color:var(--gold-light);border-color:var(--gold-light);">Areas of Practice</div>
+      <h2 class="section-heading">Comprehensive Coverage</h2>
+      <p class="section-sub">Our practice covers a broad range of statutory and advisory domains to serve diverse client needs.</p>
+    </div>
+    <div class="practice-grid">
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">Income Tax Returns</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">TDS Filing & Reconciliation</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">GST Registration</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">GST Return Filing</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">Tax Audit (44AB)</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">Statutory Audit</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">IT Appeals — CIT(A) / ITAT</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">GST Appellate Proceedings</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">Section 154 Rectification</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">Company Incorporation</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">LLP Formation</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">ROC Annual Filings</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">Bookkeeping & Accounts</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">Financial Statements</div></div>
+      <div class="practice-item"><div class="practice-dot"></div><div class="practice-name">Business Advisory</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Get in Touch</div>
+      <h2 class="section-heading">Contact Our Office</h2>
+      <p class="section-sub">For professional enquiries, please reach us at the details below. We are available Monday to Saturday.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Office Address</div>
+            <div class="contact-value">Lower Mall Road, Opp. The British Co-Ed School<br>Patiala – 147001, Punjab, India</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+91-XXXXXXXXXX<br>+91-XXXXXXXXXX</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">info@yourdomain.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Office Hours</div>
+            <div class="contact-value">Monday to Saturday: 10:00 AM – 6:00 PM<br>Sunday: Closed</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#b5882a" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p>Embed a Google Maps widget here.<br>Go to maps.google.com → search your address → Share → Embed a map → paste the iframe code here.</p>
+        <a href="https://maps.google.com/?q=Lower+Mall+Road+Patiala" target="_blank">→ View on Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-name">Sanjiv Vinod & Associates</div>
+        <div class="footer-logo-sub">Chartered Accountants</div>
+        <p class="footer-desc">A Patiala-based chartered accountancy firm providing trusted taxation, audit, and compliance services to clients across Punjab.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Income Tax</a>
+        <a href="#services">GST</a>
+        <a href="#services">TDS</a>
+        <a href="#services">Audit & Assurance</a>
+        <a href="#services">Tax Litigation</a>
+        <a href="#services">Company Law</a>
+      </div>
+      <div class="footer-col">
+        <h4>Firm</h4>
+        <a href="#about">About Us</a>
+        <a href="#team">Our Partners</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        <p>© 2025 Sanjiv Vinod and Associates. All rights reserved.</p>
+        <p class="footer-disclaimer">This website is meant for informational purposes only. The information contained herein does not constitute professional advice. Sanjiv Vinod and Associates is a firm of Chartered Accountants registered with the Institute of Chartered Accountants of India (ICAI).</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    const nav = document.getElementById('mainNav');
+    nav.classList.toggle('open');
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('mainNav').classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
